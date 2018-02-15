@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   error.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgayduk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/15 14:36:16 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/15 14:36:17 by mgayduk          ###   ########.fr       */
+/*   Created: 2018/02/15 16:13:56 by mgayduk           #+#    #+#             */
+/*   Updated: 2018/02/15 16:13:57 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef ERROR_H
+# define ERROR_H
 
-int main(int argc, char **argv)
-{
-    t_list *stack_a;
+# include "libft.h"
+# include <limits.h>
 
-    if (argc != 2)
-        return(write(2, "Usage: ./push_swap [array]\n", 27));
-    stack_a = read_array(argv[1]);
-    ft_lst_erase(stack_a);
-    return (0);
-}
+void	memory_error(void);
+void	check_type(char **arr);
+void	check_values(t_list *head);
+void	check_duplicates(t_list *head);
+
+#endif

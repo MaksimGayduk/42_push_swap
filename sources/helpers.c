@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   helpers.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgayduk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/15 14:36:16 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/15 14:36:17 by mgayduk          ###   ########.fr       */
+/*   Created: 2018/02/15 16:56:17 by mgayduk           #+#    #+#             */
+/*   Updated: 2018/02/15 16:56:18 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+void	print_list(t_list *head)
 {
-    t_list *stack_a;
-
-    if (argc != 2)
-        return(write(2, "Usage: ./push_swap [array]\n", 27));
-    stack_a = read_array(argv[1]);
-    ft_lst_erase(stack_a);
-    return (0);
+	while (head)
+	{
+		printf("%i\n", *((int *)head->content));
+		head = head->next;
+	}
 }
