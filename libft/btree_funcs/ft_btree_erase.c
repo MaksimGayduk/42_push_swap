@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btreedelone.c                                   :+:      :+:    :+:   */
+/*   ft_btree_erase.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgayduk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 12:11:47 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/16 12:11:54 by mgayduk          ###   ########.fr       */
+/*   Created: 2018/02/16 17:58:09 by mgayduk           #+#    #+#             */
+/*   Updated: 2018/02/16 17:58:11 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_btree.h"
 
-void	ft_btreedelone(t_btree **abtree, void (*del)(void *, size_t))
+void	ft_btree_erase(t_btree **root, void (*del)(void *, size_t))
 {
-	if (abtree && *abtree && del)
+	int a;
+
+	if (!(*root))
+		return ;
+	a = *((int *)(*root)->content);
+	ft_btree_erase(&((*root)->left), del);
+	ft_btree_erase(&((*root)->right), del);
+	if (!(*root)->right && !(*root)->left)
 	{
-		(*del)((*abtree)->content, (*abtree)->content_size);
-		free(*abtree);
-		*abtree = NULL;
+		del((*root)->content, (*root)->content_size);
+		free(*root);
+		*root = NULL;
+		return ;
 	}
 }
