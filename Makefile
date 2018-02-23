@@ -6,7 +6,7 @@
 #    By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/28 08:37:35 by mgayduk           #+#    #+#              #
-#    Updated: 2018/02/23 19:32:01 by mgayduk          ###   ########.fr        #
+#    Updated: 2018/02/23 20:20:26 by mgayduk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRC :=	push_swap.c 		\
 		input_error.c		\
 		helpers.c			\
 		ps_tools.c			\
+		ps_tools_wrap1.c	\
 		sorter1.c 			\
 		mediana.c    		\
 		printer.c
