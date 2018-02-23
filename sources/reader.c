@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 14:54:15 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/23 16:58:06 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/02/23 19:30:16 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list *write_to_list(char **arr)
     temp = ft_atoi(*arr++);
     head = ft_lstnew(&temp, sizeof(intmax_t));
     if (!head)
-        memory_error();
+        error("memory allocation failed");
     tail = head;
     while (*arr)
     {
