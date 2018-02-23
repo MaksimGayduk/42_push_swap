@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/23 13:46:11 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/23 14:19:06 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/02/23 16:41:19 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@
 
 #include "libft.h"
 
+void    ps_push(t_list **from, t_list **to);
 void    ps_swap(t_list *head);
 void    ps_rotate(t_list **head);
+void    ps_rev_rotate(t_list **head);
 
 #endif
