@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reader.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgayduk <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 14:54:15 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/15 14:54:16 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/02/23 14:38:26 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ t_list *read_array(char *str)
     t_list  *head;
 
     arr = ft_strsplit(str, ' ');
+    if (!*arr)
+        error();
     check_type(arr);
     head = write_to_list(arr);
     check_values(head);
     check_duplicates(head);
     ft_clear_strarr(&arr);
-    print_list(head);
     return (head);
 }

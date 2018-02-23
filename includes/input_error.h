@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.h                                            :+:      :+:    :+:   */
+/*   input_error.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgayduk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/15 16:13:56 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/15 16:13:57 by mgayduk          ###   ########.fr       */
+/*   Created: 2018/02/23 13:40:18 by mgayduk           #+#    #+#             */
+/*   Updated: 2018/02/23 13:40:19 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERROR_H
-# define ERROR_H
+#ifndef INPUT_ERROR_H
+# define INPUT_ERROR_H
 
 # include "libft.h"
 # include <limits.h>

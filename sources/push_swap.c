@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgayduk <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 14:36:16 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/15 14:36:17 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/02/23 14:20:40 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ int main(int argc, char **argv)
     if (argc != 2)
         return(write(2, "Usage: ./push_swap [array]\n", 27));
     stack_a = read_array(argv[1]);
+    print_list(stack_a);
+    ft_printf("______\n");
+    ps_swap(stack_a);
+    print_list(stack_a);
+    ft_printf("______\n");
+    ps_rotate(&stack_a);
+    print_list(stack_a);
     ft_lst_erase(stack_a);
     return (0);
 }

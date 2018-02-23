@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ps_tools.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/15 14:39:56 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/23 13:53:54 by mgayduk          ###   ########.fr       */
+/*   Created: 2018/02/23 13:46:11 by mgayduk           #+#    #+#             */
+/*   Updated: 2018/02/23 14:19:06 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+/*
+** ps means push_swap
+*/
 
-# include "libft.h"
-# include "input_error.h"
-# include "ps_tools.h"
+#ifndef PS_TOOLS_H
+# define PS_TOOLS_H
 
-t_list	*read_array(char *str);
+#include "libft.h"
 
-void	print_list(t_list *head);
-void	error(void);
-void	memory_error(void);
+void    ps_swap(t_list *head);
+void    ps_rotate(t_list **head);
 
 #endif
