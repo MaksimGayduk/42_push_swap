@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 16:56:17 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/23 19:30:37 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/02/25 14:46:50 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,12 @@ int		btree_cmp(void *cont1, void *cont2)
 		return (0);
 	else
 		return (1);
+}
+
+int		is_min(int x, int y, int z)
+{
+	if (x < y && x < z)
+		return (1);
+	else
+		return (0);
 }

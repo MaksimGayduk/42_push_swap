@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/23 19:28:43 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/02/23 19:33:59 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/02/25 14:31:47 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 static void btree_step(t_btree *root, int *gate, int *med)
 {
-	int n;
-
 	if (!root)
 		return ;
-	n = VAL(root);
 	btree_step(root->left, gate, med);
 	(*gate)--;
 	if (!(*gate))
-		*med = n;
+		*med = *((int *)root->content);
 	btree_step(root->right, gate, med);
 }
 
