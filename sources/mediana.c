@@ -6,13 +6,13 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/23 19:28:43 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/01 15:33:42 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/05 14:17:08 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void btree_step(t_btree *root, int *gate, int *med)
+static void	btree_step(t_btree *root, int *gate, int *med)
 {
 	if (!root)
 		return ;
@@ -23,7 +23,7 @@ static void btree_step(t_btree *root, int *gate, int *med)
 	btree_step(root->right, gate, med);
 }
 
-int get_mediana(t_list *head, int len, int steps)
+int			get_mediana(t_list *head, int len, int steps)
 {
 	t_btree	*root;
 	int		s;
