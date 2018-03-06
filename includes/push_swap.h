@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 14:39:56 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/06 11:22:30 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/06 12:11:57 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int 	get_mediana(t_list *head, int len, int steps);
 int		get_stack_len(t_list *a);
 int     one_group_in_stack(t_list **a);
 void    sort_group_a(t_list **a, t_list **b);
+void	sort_group_a_last(t_list **a, t_list **b);
 void    sort_group_b(t_list **a, t_list **b);
 int     stack_sorted_a(t_list *a, int len);
 #endif
