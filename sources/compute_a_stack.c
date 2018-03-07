@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/04 18:00:54 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/06 17:35:28 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/07 11:05:24 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ static int		divide_a(t_list **a, t_list **b, int len, int med)
 			pb(a, b, 1);
 			count--;
 		}
-		print_stacks(*a, *b);
 	}
 	return (ret_back);
 }

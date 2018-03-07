@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 14:36:16 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/06 18:19:57 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/07 11:04:16 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(int argc, char **argv)
 {
 	t_list	*a;
 	t_list	*b;
-	int		len;
 
 	a = NULL;
 	b = NULL;
@@ -26,10 +25,7 @@ int	main(int argc, char **argv)
 		a = parse_string(argv[1]);
 	else
 		a = parse_args(argv);
-	print_stacks(a, b);
 	sort_stack(&a, &b);
-	print_stacks(a, b);
-	len = ft_lstlen(a);
 	ft_lst_erase(a);
 	return (0);
 }
