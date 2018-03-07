@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 14:36:16 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/07 11:04:16 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/07 14:02:37 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	else if (argc == 2)
 		a = parse_string(argv[1]);
 	else
-		a = parse_args(argv);
+		a = parse_args(++argv);
 	sort_stack(&a, &b);
 	ft_lst_erase(a);
 	return (0);
