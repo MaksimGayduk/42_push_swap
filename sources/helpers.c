@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 16:56:17 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/05 14:16:06 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/10 12:02:31 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	error(char *desc)
 {
 	if (!desc)
-		exit(ft_printf(RED "%&Error\n" RESET, 2));
+		exit(ft_printf("%&Error\n", 2));
 	else
 		exit(ft_printf(RED "%&Error: %s\n" RESET, 2, desc));
 }
