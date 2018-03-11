@@ -6,7 +6,7 @@
 #    By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/28 08:37:35 by mgayduk           #+#    #+#              #
-#    Updated: 2018/03/11 13:48:16 by mgayduk          ###   ########.fr        #
+#    Updated: 2018/03/11 14:12:28 by mgayduk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,6 +95,7 @@ clean:
 fclean: clean
 	rm -rf $(LFT_DIR)/$(LFT)
 	rm -rf $(NAME)
+	rm -rf $(NAME2)
 
 re: fclean all
 
