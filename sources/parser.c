@@ -6,7 +6,7 @@
 /*   By: mgayduk <mgayduk@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 12:37:45 by mgayduk           #+#    #+#             */
-/*   Updated: 2018/03/10 11:59:10 by mgayduk          ###   ########.fr       */
+/*   Updated: 2018/03/12 17:29:23 by mgayduk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ static void	detect_flag(char *arg, t_flags *flags)
 	else if (ft_strequ(arg, "-h"))
 		flags->h = 1;
 	else
-		error("incorrect flag (use ./checker -h for help)");
+		flags->e ? error("incorrect flag (use ./checker -h for help)")
+					: error(NULL);
 }
 
 t_flags		parse_flags(char ***args)
